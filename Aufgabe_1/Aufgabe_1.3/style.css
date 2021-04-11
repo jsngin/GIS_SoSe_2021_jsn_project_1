@@ -18,21 +18,17 @@ header img{
 	width:auto;
 	height:auto;
 }
-h1{
+.TEST_KLASSE{
+	background-color: lawngreen;
+}
+.TEST_KLASSE_2{
+	background-color: lightpink;
+}
+h1, h2, h3{
 	margin-left:auto;
 	float:none;
 	text-align:center;
 }	
-h2{
-	margin-left:auto;
-	float:none;
-	text-align:center;
-}
-h3{
-	margin-left:auto;
-	float:none;
-	text-align:center;
-}
 li{
 	margin-left:auto;
 	float: none;
@@ -44,16 +40,11 @@ blockquote{
 	text-align:center;
 	float: none;
 }
-b{
+a, b{
+	font-size: arial;
 	margin-left:auto;
 	text-align:center;
 	float: none;
-}
-a{
-	font-size: arial;
-	float: none;
-	display: block;
-	text-align:center;
 }
 em{
 	font-size: arial;
@@ -71,6 +62,19 @@ img{
 	margin-left:auto;
 	margin-right:auto;
 	display: block;
+	width:auto;height:auto;
+}
+#PIC{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	width:auto;height:auto;
+}
+#rawpic{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	width:500px;height:450px;
 }
 video{
 	margin-left:auto;
@@ -87,14 +91,12 @@ main{
 	width:100%;
 	margin-bottom:10px;
 }
-#navigation{
+nav{
 	text-align: center;
-	background-color: #ea899a;
-	width:15%;
-	min-height:300px;
-	float:left;
-	border:2px solid black;
-	margin:10px;
+	float:center;
+	position: sticky;
+	top: 0;
+	display: block;
 }
 #navigation li{
 	font-size:1.3em;
@@ -103,11 +105,6 @@ main{
 	padding:30px;
 }
 p{
-	font-size: arial;
-	display: block;
-	text-align:center;
-}
-b{
 	font-size: arial;
 	display: block;
 	text-align:center;
