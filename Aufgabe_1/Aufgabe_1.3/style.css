@@ -1,22 +1,25 @@
 @charset "UTF-8";		
 body{
-	font-family:arial;
+	font-family:arial, sans-serif;
 	background-image: url("bg.png");
 	background-color: #cccccc;
 	margin: auto;
 	padding: auto;
-	border: 5px solid grey;
+	border: 3px solid grey;
+	width: 800px;
 }
 header{
 	background-color: grey;
 	width:auto;
 	height:auto;
 	margin-bottom:auto;
+	margin-right: auto;
 }
 header img{
 	float:none;
 	width:auto;
 	height:auto;
+	display: block;
 }
 .TEST_KLASSE{
 	background-color: lawngreen;
@@ -40,11 +43,19 @@ blockquote{
 	text-align:center;
 	float: none;
 }
-a, b{
+a{
 	font-size: arial;
 	margin-left:auto;
 	text-align:center;
 	float: none;
+	display: block;
+}
+b{
+	font-size: arial;
+	margin-left:auto;
+	text-align:center;
+	float: none;
+	display: block;
 }
 em{
 	font-size: arial;
@@ -74,7 +85,7 @@ img{
 	margin-left:auto;
 	margin-right:auto;
 	display: block;
-	width:auto;height:auto;
+	width:100px;height:auto;
 }
 .rawpic{
 	margin-left:auto;
@@ -88,7 +99,24 @@ img{
 	display: block;
 	width:500px;height:450px;
 }
+#rawpic1{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	width: 600px;height:600px;
+}
+#instagram_icon{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	width:auto;height:auto;
+}
 video{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+}
+.formular{
 	margin-left:auto;
 	margin-right:auto;
 	display: block;
@@ -105,10 +133,16 @@ main{
 }
 nav{
 	text-align: center;
-	float:center;
+	float:right;
 	position: sticky;
 	top: 0;
-	display: block;
+}
+.navi:hover{
+	transform: scale(1.1);
+  	opacity: 1;
+}
+#aktuell{
+    color: black;
 }
 #navigation li{
 	font-size:1.3em;
@@ -176,7 +210,7 @@ footer h3{
 	margin-block-end:0;
 	padding-bottom:15px;
 }
-@media screen and (max-width: 750px){
+@media screen and (max-width: 800px){
 	#navigation{
 		width:100%;
 		min-height:40px;
@@ -194,7 +228,6 @@ footer h3{
 		padding:0;
 		margin-top:0;
 		margin-bottom: 10px;
-
 	}
 }
 @media screen and (max-width: 550px){

@@ -7,24 +7,22 @@
     <link rel="stylesheet" href="style.css">
   </head>
 	<body>
-    <div>
-      <header>
-        <img id="HFU" src="hfu_logo.jpg" alt="HFU">
-      </header>
+    <nav>
+      <div>
+      <h1> Hauptmenü</h1>
+      <ul>
+      <li><a class="nav" href="index.html">Portfolio</a></li>
+      <li><a class="nav" id="aktuell" href="kontakt.html">Kontakt</a></li>
+      <li><a class="nav" href="steckbrief.html">Steckbrief</a></li>
+      <li><a href="https://www.instagram.com/jasongin/"> <img id="instagram_icon" src="instagram_icon.png" alt="instagram_icon" > </a></li>
+      </ul>
       </div>
-      <nav>
-		<h1>Hauptmenü</h1>
-    <div>
-		<ul>
-		<li><a href="index.html">Portfolio</a></li>
-		<li><a href="kontakt.html">Kontakt</a></li>
-		<li><a href="steckbrief.html">Steckbrief</a></li>
-		</ul>
-		</div>
-    </nav>
+      </nav>
+      <img src="hfu_logo.jpg" alt="HFU">
+      <a href="https://hs-furtwangen.de" >Visit hs-furtwangen.de</a>
+
     <h1>   Kontakt  </h1>
-<p>
-</p>
+
   <h2><u>Instagram</u></h2>
   <blockquote>falls man Instagram noch kennt...</blockquote>
   <a href="https://www.instagram.com/jasongin/"> <img id="PIC" src="Instagram.jpg" alt="Insta-Minsta" > </a>
@@ -35,14 +33,15 @@
 <form id="kontaktformular" name="kontaktformular" action="Kontaktformular">
   <div>
     <strong><label for="absender">Ihre E-Mail-Adresse:</label></strong>
-    <input type="text" id="absender" name="absender">
+    <input type="text" class="formular" name="absender">
   </div>
   <div>
   <br>
     <i><label for="nachricht">Ihre Nachricht:</label></i>
-    <textarea id="nachricht" name="nachricht" cols="20" rows="5"></textarea>
+    <textarea class="formular" name="nachricht" cols="20" rows="5"></textarea>
 </div>
-    <input type="submit" value="Abschicken" />
+    <input class="formular" type="submit" value="Abschicken" />
   </form>
   </body>
 </html>
+
