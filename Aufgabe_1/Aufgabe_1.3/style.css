@@ -171,12 +171,6 @@ input{
 	display: block;
 	text-align:center;
 }
-label{
-	font-size: arial;
-	float: none;
-	display: block;
-	text-align:center;
-}
 textarea{
 	font-size: arial;
 	float: none;
