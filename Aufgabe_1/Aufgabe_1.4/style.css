@@ -263,7 +263,7 @@ footer h3{
 }
 @media screen and (max-width: 800px) {
 		body{
-			width: auto;
+			width: 550px;
 		}
 		
 	}
