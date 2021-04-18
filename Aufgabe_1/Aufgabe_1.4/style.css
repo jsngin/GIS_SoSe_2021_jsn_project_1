@@ -20,7 +20,7 @@ header img{
 }
 .flex-container {
 	display: flex;
-	background-color: DodgerBlue;
+	background-color: rgb(0, 51, 102);
 	align-items: center;
 	flex-direction: row;
 	justify-content: center;
@@ -135,6 +135,12 @@ div img{
 	margin-right:auto;
 	display: block;
 	width:500px;height:450px;
+}
+#rawpic1{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	width: 600px;height:600px;
 }
 video{
 	margin-left:auto;
