@@ -5,8 +5,7 @@ body{
 	background-color: #cccccc;
 	margin: auto;
 	padding: 5px;
-	border: 5px solid grey;
-	
+	width: 800px;
 }
 header{
 	background-color: grey;
@@ -19,6 +18,22 @@ header img{
 	width:auto;
 	height:auto;
 }
+.flex-container {
+	display: flex;
+	background-color: DodgerBlue;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+  }
+  .flex-container > div {
+	margin: auto;
+	padding: auto;
+	font-size: 10px;
+  }
+  #instagram_icon:hover{
+	transform: scale(1.1);
+	opacity: 1;
+  }
 .TEST_KLASSE{
 	background-color: lawngreen;
 }
@@ -75,7 +90,7 @@ img{
 	display: block;
 	width:auto;height:auto;
 }
-img:hover {
+.nav:hover{
 	transform: scale(1.5);
 	opacity: 1;
   }
@@ -86,6 +101,10 @@ img:hover {
 	width:auto;height:auto;
 	float: none;
 	position: relative;
+}
+.testanimal:hover{
+	transform: scale(1.1);
+  	opacity: 1;
 }
 .PIC{
 	margin-left:auto;
@@ -116,6 +135,11 @@ video{
 	margin-right:auto;
 	display: block;
 }
+.formular{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+}
 audio{
 	margin-left:auto;
 	margin-right:auto;
@@ -128,10 +152,16 @@ main{
 }
 nav{
 	text-align: center;
-	float:center;
+	float:right;
 	position: sticky;
 	top: 0;
-	display: block;
+}
+.navi:hover{
+	transform: scale(1.1);
+  	opacity: 1;
+}
+#aktuell{
+    color: black;
 }
 #navigation li{
 	font-size:1.3em;
