@@ -116,7 +116,7 @@ namespace P2_2 {
   console.log(strCopy);
   // output: ["nachts ist es kälter als draußen."]
 
-  namespace canvas {
+
   //Aufgabe 3 - Endlich was visuelles!
   //a.)
   let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById("firstone");
@@ -227,9 +227,7 @@ namespace P2_2 {
     let h: number = getRandom(400);
     context.fillRect(x, y, w, h);
 }
-
   createRect();
-
 
   class Rectangle {
     width: number;
@@ -239,16 +237,12 @@ createRectangle(_width: number, _height: number): void {
     this.width = _width;
     this.height = _height;
 }
-
-
 createRandomRec(): void {
     this.width = Math.floor(Math.random() * 100);
     this.height = Math.floor(Math.random() * 100);
 }
-
-
 drawRectangle(x: number, y: number, fill: boolean, color?: string): void {
-    let c: string = "rgb(188,143,143)";
+    let c: string = "yellow";
     context.beginPath();
     context.rect(x, y, this.width, this.height);
     if (color) {
@@ -277,30 +271,29 @@ drawRandom(): void {
     }
 }
 
+  const r: Rectangle = new Rectangle();
+  r.createRectangle(300, 300);
+  r.drawRectangle(300, 650, true);
+
+
   const r1: Rectangle = new Rectangle();
-  r1.createRectangle(300, 300);
-  r1.drawRectangle(300, 650, true);
+  r1.createRandomRec();
+  r1.drawRectangle(250, 650, false);
 
 
   const r2: Rectangle = new Rectangle();
   r2.createRandomRec();
-  r2.drawRectangle(250, 650, false);
+  r2.drawRectangle(500, 750, true, "blue)");
 
 
   const r3: Rectangle = new Rectangle();
   r3.createRandomRec();
-  r3.drawRectangle(500, 750, true, "blue)");
-
-
   const r4: Rectangle = new Rectangle();
   r4.createRandomRec();
   const r5: Rectangle = new Rectangle();
   r5.createRandomRec();
-  const r6: Rectangle = new Rectangle();
-  r6.createRandomRec();
 
   let rectangles: Array<Rectangle> = new Array();
-  rectangles = [r4, r5, r6];
+  rectangles = [r3, r4, r5];
   rectangles.forEach(rec => rec.drawRandom());
   }
-}
