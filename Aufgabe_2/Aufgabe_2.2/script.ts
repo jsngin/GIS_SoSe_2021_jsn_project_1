@@ -67,7 +67,7 @@ namespace P2_2 {
     for (let i: number = 0; i < p.length; i++) {
         if (matrikelnummer == p[i].matrikelnummer) { 
             console.log(p[i].nameStudent, p[i].matrikelnummer, p[i].studiengang);
-            return true; // zurückgeben 
+            return true;
         }
     }
     console.log("student not found");
@@ -85,15 +85,15 @@ namespace P2_2 {
   // a.)
   const array = ["one", "two", "three"];
   console.log("array:", array);
-  // output: "array:" Array ["one", "two", "three"]
+  // output: "array:" ["one", "two", "three"]
   
   const reversed = array.reverse();
   console.log("reversed:", reversed);
-  // output: "reversed:" Array ["three", "two", "one"]
+  // output: "reversed:" ["three", "two", "one"]
   
   // destructiv reverse
   console.log("array:", array);
-  // output: Array ["three", "two", "one"]
+  // output: ["three", "two", "one"]
   
   // b.)
   const elements = ["mic", "check_one"];
@@ -114,8 +114,8 @@ namespace P2_2 {
   
   const strCopy = str.split(" ");
   console.log(strCopy);
-  // output: array ["nachts ist es kälter als draußen."]
-  
+  // output: ["nachts ist es kälter als draußen."]
+
   namespace canvas {
   //Aufgabe 3 - Endlich was visuelles!
   //a.)
