@@ -78,6 +78,30 @@ var P2_2;
     context.fillRect(0, 0, 500, 400); //x y pos sky
     context.fillStyle = "lightgreen"; //gras
     context.fillRect(0, 250, 500, 300);
+    context.beginPath(); //cloud
+    context.fillStyle = "white";
+    context.arc(240, 85, 35, 0, Math.PI * 2);
+    context.fill();
+    context.beginPath(); //cloud
+    context.fillStyle = "white";
+    context.arc(270, 75, 40, 0, Math.PI * 2);
+    context.fill();
+    context.beginPath(); //cloud
+    context.fillStyle = "white";
+    context.arc(285, 80, 35, 0, Math.PI * 2);
+    context.fill();
+    context.beginPath(); //cloud1
+    context.fillStyle = "white";
+    context.arc(35, 60, 20, 0, Math.PI * 2);
+    context.fill();
+    context.beginPath(); //cloud1
+    context.fillStyle = "white";
+    context.arc(80, 44, 25, 0, Math.PI * 2);
+    context.fill();
+    context.beginPath(); //cloud1
+    context.fillStyle = "white";
+    context.fill();
+    context.arc(55, 60, 25, 0, Math.PI * 2);
     context.beginPath(); //trunk
     context.lineWidth = 2.5;
     context.fillStyle = "brown";
@@ -123,30 +147,6 @@ var P2_2;
     context.closePath();
     context.fill();
     context.stroke();
-    context.beginPath(); //cloud
-    context.fillStyle = "white";
-    context.arc(240, 85, 35, 0, Math.PI * 2);
-    context.fill();
-    context.beginPath(); //cloud
-    context.fillStyle = "white";
-    context.arc(270, 75, 40, 0, Math.PI * 2);
-    context.fill();
-    context.beginPath(); //cloud
-    context.fillStyle = "white";
-    context.arc(285, 80, 35, 0, Math.PI * 2);
-    context.fill();
-    context.beginPath(); //cloud1
-    context.fillStyle = "white";
-    context.arc(35, 60, 20, 0, Math.PI * 2);
-    context.fill();
-    context.beginPath(); //cloud1
-    context.fillStyle = "white";
-    context.arc(80, 44, 25, 0, Math.PI * 2);
-    context.fill();
-    context.beginPath(); //cloud1
-    context.fillStyle = "white";
-    context.arc(55, 60, 25, 0, Math.PI * 2);
-    context.fill();
     console.log(canvas);
 })(P2_2 || (P2_2 = {}));
 //# sourceMappingURL=script.js.map
