@@ -36,11 +36,11 @@ var P2_2;
         matrikelnummer: 17443,
         studiengang: "OMB"
     };
-    let p = [
-        { "nameStudent": "Jason", "matrikelnummer": 78120, "studiengang": "MIB" },
-        { "nameStudent": "Nicole", "matrikelnummer": 79713, "studiengang": "MKB" },
-        { "nameStudent": "Aydin", "matrikelnummer": 17443, "studiengang": "OMB" }
-    ];
+    /*let p: Array<Student> = [
+      {"nameStudent": "Jason", "matrikelnummer": 78120, "studiengang": "MIB"},
+      {"nameStudent": "Nicole", "matrikelnummer": 79713, "studiengang": "MKB"},
+      {"nameStudent": "Aydin", "matrikelnummer": 17443, "studiengang": "OMB"}
+    ];*/
     console.log(p1);
     console.log(p2);
     console.log(p3);
