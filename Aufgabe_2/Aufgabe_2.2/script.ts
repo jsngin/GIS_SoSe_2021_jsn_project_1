@@ -1,4 +1,4 @@
-namespace P2_2 {
+/*namespace P2_2 {
   //Aufgabe 1 - Mehr "langweilige" Konsolenausgaben
   // a.)
   function min(...args: number[]): number {
@@ -80,44 +80,55 @@ namespace P2_2 {
   showInfo(78120);
   showInfo(79713);
   showInfo(17443);
-  
+  */
   // Aufgabe 2 - Arrays
   // a.)
-  const array = ["one", "two", "three"];
-  console.log("array:", array);
-  // output: "array:" ["one", "two", "three"]
-  
-  const reversed = array.reverse();
-  console.log("reversed:", reversed);
-  // output: "reversed:" ["three", "two", "one"]
-  
-  // destructiv reverse
-  console.log("array:", array);
-  // output: ["three", "two", "one"]
-  
-  // b.)
-  const elements = ["mic", "check_one"];
-  
-  console.log(elements.join());
-  // output: "mic, checkone"
-  
-  // c.)
-  const str = "nachts ist es kälter als draußen.";
-  
-  const word = str.split(" ");
-  console.log(word[3]);
-  // output: "es"
-  
-  const chars = str.split("");
-  console.log(chars[8]);
-  // output: "s"
-  
-  const strCopy = str.split(" ");
-  console.log(strCopy);
-  // output: ["nachts ist es kälter als draußen."]
+  function backwards(array: number[]): number[] {
+    let backwardsArray: number[] = [];
+    for (let i: number = array.length - 1; i >= 0; i--) {
+        backwardsArray[i] = array[array.length - i - 1];
+    }
+    return backwardsArray;
+}
+// b.)
+  function join(...arrays: number[][]): number[] {
+    let joinedArray: number[] = [];
+    let index: number = 0;
+    arrays.forEach(array => {
+        for (let j: number = 0; j < array.length; j++) {
+            joinedArray[index] = array[j];
+            index++;
+        }
+    });
+    return joinedArray;
+}
+// c.)
+  function split(array: number[], index1: number, index2: number): number[] {
+    let splitArray: number[] = [];
+    let fueller: number = 0;
+    for (let k: number = index1; k <= index2; k++) {
+        splitArray[fueller] = array[k];
+        fueller++;
+    }
+    return splitArray;
+}
+
+// Testcode 
+  let arr: number[] = [5, 42, 17, 2018, -10, 60, -10010];
+  let arrBack: number[] = backwards(arr);
+  console.log(arr);
+  console.log(arrBack);
+  console.log(join(arr, [15, 9001, -440] ));
+  console.log(join([123, 666, -911], arr, [15, 9001, -440, 1024] )); // Bonus b)
+  arr = split(arr, 0, 4);
+  console.log(arr);
+  console.log(split(arr, 1, 2));
+  console.log(split(arr, 2, 0));     // Bonus c)
+  console.log(split(arr, -1, 2));    // Bonus c)
+  console.log(split(arr, 0, 7));     // Bonus c)
 
 
-  //Aufgabe 3 - Endlich was visuelles!
+  /*//Aufgabe 3 - Endlich was visuelles!
   //a.)
   let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById("firstone");
   let context: CanvasRenderingContext2D = canvas.getContext("2d");
@@ -296,4 +307,4 @@ drawRandom(): void {
   let rectangles: Array<Rectangle> = new Array();
   rectangles = [r3, r4, r5];
   rectangles.forEach(rec => rec.drawRandom());
-  }
+  }*/
