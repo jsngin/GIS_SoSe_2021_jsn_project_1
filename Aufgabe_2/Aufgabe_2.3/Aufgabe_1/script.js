@@ -1,10 +1,10 @@
 "use strict";
 var Aufgabe01;
 (function (Aufgabe01) {
-    document.addEventListener("DomContentLoaded", function () {
-        const newrec = document.getElementById("newrec");
+    document.addEventListener("DOMContentLoaded", function () {
+        const newRec = document.getElementById("newRec");
         const recContainer = document.querySelector(".recContainer");
-        const reload = document.getElementById("reload");
+        const reset = document.getElementById("reset");
         class Rectangle {
             createRandomRec() {
                 this.width = Math.floor(Math.random() * 100 + 20);
@@ -18,12 +18,12 @@ var Aufgabe01;
                 recDiv.style.height = rec.height + "px";
                 recDiv.style.top = y + "px";
                 recDiv.style.left = x + "px";
-                recDiv.style.position = "asbolute";
-                recDiv.style.backgroundColor = "green";
+                recDiv.style.position = "absolute";
+                recDiv.style.backgroundColor = "rgb(245,245,245)";
                 recContainer.appendChild(recDiv);
             }
         }
-        function addnewRec() {
+        function addNewRec() {
             let rec = new Rectangle();
             rec.createRandomRec();
             rec.drawRandom(rec);
@@ -31,8 +31,8 @@ var Aufgabe01;
         function clearRecContainer() {
             recContainer.innerHTML = "";
         }
-        newrec.addEventListener("click", addnewRec);
-        reload.addEventListener("click", clearRecContainer);
+        newRec.addEventListener("click", addNewRec);
+        reset.addEventListener("click", clearRecContainer);
     });
 })(Aufgabe01 || (Aufgabe01 = {}));
 //# sourceMappingURL=script.js.map
