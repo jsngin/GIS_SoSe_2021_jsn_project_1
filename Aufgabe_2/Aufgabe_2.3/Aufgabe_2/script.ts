@@ -1,6 +1,5 @@
 namespace Aufgabe02 {
     
-    //const save: HTMLElement = document.getElementById("save");
     const displayarea: HTMLElement = document.getElementById("displayarea");
     class Person {
         head: string;
@@ -26,25 +25,24 @@ namespace Aufgabe02 {
     }
     let person: Person = new Person();
 
-    //nextHead.addEventListener("click", auswahlKopf); //"Create" als erster Schritt
-    for (let i: number = 0; i < kopfBilder.length; i++) {
+    for (let i: number = 0; i < productsPics.length; i++) {
         const imgElem: HTMLImageElement = document.createElement("img");
-        imgElem.src = kopfBilder[i];
-        imgElem.className = "auswahlbilder";
+        imgElem.src = productsPics[i];
+        imgElem.className = "products";
         imgElem.id = String(i + 1);
         displayarea.appendChild(imgElem);
     }
 
-    const optionsHead: NodeListOf<HTMLElement> = document.querySelectorAll(".auswahlbilder");
+    const optionsHead: NodeListOf<HTMLElement> = document.querySelectorAll(".products");
 
     function highlightSelection(element: HTMLElement): void {
         optionsHead.forEach(element => {
-            element.style.border = "4px solid transparent";
-            element.style.boxShadow = "2px 3px 7px rgba(0, 0, 0, 0.3)";
+            element.style.border = "3px solid transparent";
+            element.style.boxShadow = "2px 3px 7px black";
         });
 
         element.style.border = "4px solid #000";
-        element.style.boxShadow = "3px 4px 7px rgba(0, 0, 0, 0.7)";
+        element.style.boxShadow = "3px 4px 7px ";
     }
     
     optionsHead.forEach(element => {

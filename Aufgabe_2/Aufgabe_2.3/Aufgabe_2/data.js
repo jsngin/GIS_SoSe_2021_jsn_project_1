@@ -1,3 +1,3 @@
 "use strict";
-let kopfBilder = ["images/Tier1.jpg", "images/Tier2.jpg", "images/Tier3.jpg", "images/Tier4.jpg", "images/Tier5.jpg", "images/Tier6.jpg"];
+let productsPics = ["product_1.PNG", "product_2.PNG", "product_3.PNG", "product_4.PNG", "product_5.PNG", "product_6.PNG"];
 //# sourceMappingURL=data.js.map
