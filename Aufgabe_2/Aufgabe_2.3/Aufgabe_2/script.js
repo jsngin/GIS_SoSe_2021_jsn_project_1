@@ -2,7 +2,7 @@
 var Aufgabe02;
 (function (Aufgabe02) {
     //const save: HTMLElement = document.getElementById("save");
-    const anzeigeflaeche = document.getElementById("anzeigeflaeche");
+    const displayarea = document.getElementById("displayarea");
     class Person {
         setHead(_head) {
             this.head = _head;
@@ -24,7 +24,7 @@ var Aufgabe02;
         imgElem.src = kopfBilder[i];
         imgElem.className = "auswahlbilder";
         imgElem.id = String(i + 1);
-        anzeigeflaeche.appendChild(imgElem);
+        displayarea.appendChild(imgElem);
     }
     const optionsHead = document.querySelectorAll(".auswahlbilder");
     function highlightSelection(element) {

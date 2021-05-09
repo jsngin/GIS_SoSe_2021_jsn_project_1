@@ -1,7 +1,7 @@
 namespace Aufgabe02 {
     
     //const save: HTMLElement = document.getElementById("save");
-    const anzeigeflaeche: HTMLElement = document.getElementById("anzeigeflaeche");
+    const displayarea: HTMLElement = document.getElementById("displayarea");
     class Person {
         head: string;
         body: string;
@@ -32,7 +32,7 @@ namespace Aufgabe02 {
         imgElem.src = kopfBilder[i];
         imgElem.className = "auswahlbilder";
         imgElem.id = String(i + 1);
-        anzeigeflaeche.appendChild(imgElem);
+        displayarea.appendChild(imgElem);
     }
 
     const optionsHead: NodeListOf<HTMLElement> = document.querySelectorAll(".auswahlbilder");
