@@ -3,22 +3,22 @@ var Aufgabe_2_5;
 (function (Aufgabe_2_5) {
     let buttonsDiv = document.getElementById("buttons");
     let path = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1);
-    let response = document.getElementById("response");
-    let currentPick = document.getElementById("currentPick");
-    currentKit();
+    let antwort = document.getElementById("antwort");
+    let derzeitigAuswahl = document.getElementById("derzeitigeAuswahl");
+    derzeitigKit();
     let speicherButton = document.createElement("button");
-    speicherButton.id = "save";
-    speicherButton.innerHTML = "save";
+    speicherButton.id = "speichern";
+    speicherButton.innerHTML = "speichern";
     speicherButton.addEventListener("click", nächsteAuswahl);
     buttonsDiv.appendChild(speicherButton);
     let abbrechenButton = document.createElement("button");
-    abbrechenButton.id = "cancel";
-    abbrechenButton.innerHTML = "cancel";
+    abbrechenButton.id = "abbrechen";
+    abbrechenButton.innerHTML = "abbrechen";
     abbrechenButton.addEventListener("click", abbrechen);
     buttonsDiv.appendChild(abbrechenButton);
     let zurückButton = document.createElement("button");
-    zurückButton.id = "back";
-    zurückButton.innerHTML = "back";
+    zurückButton.id = "zurück";
+    zurückButton.innerHTML = "zurück";
     zurückButton.addEventListener("click", zurück);
     buttonsDiv.appendChild(zurückButton);
     function abbrechen() {
@@ -38,19 +38,19 @@ var Aufgabe_2_5;
         }
         window.open(vorherigeSeite, "_self");
     }
-    let previousElement = document.getElementById("functions");
-    function wählen(_kit) {
-        let art = _kit.DrumKit;
+    let previousElement = document.getElementById("funktionen");
+    function wählen(_Kit) {
+        let art = _Kit.DrumKit;
         if (window.location.href.includes("auswahlRetroKit.html"))
-            art = _kit.RetroKit;
+            art = _Kit.RetroKit;
         if (window.location.href.includes("auswahlLoopKit.html"))
-            art = _kit.LoopKit;
+            art = _Kit.LoopKit;
         return art;
     }
     async function transformieren(_url) {
         let antwort = await fetch(_url);
         let inhalt = await antwort.json();
-        console.log("Repsonse", inhalt);
+        console.log("Antwort", inhalt);
         let wahl = wählen(inhalt);
         auswählen(wahl);
     }
@@ -60,8 +60,8 @@ var Aufgabe_2_5;
             let img = document.createElement("img");
             img.setAttribute("src", _ausgewählt[index].link);
             img.addEventListener("click", function event() {
-                speichern(_ausgewählt[index].link, _ausgewählt[index].link);
-                currentKit();
+                speichern(_ausgewählt[index].link, _ausgewählt[index].typ);
+                derzeitigKit();
             });
             img.id = _ausgewählt[index].name;
             previousElement.appendChild(img);
@@ -70,56 +70,56 @@ var Aufgabe_2_5;
     function nächsteAuswahl() {
         if (window.location.href.includes("auswahlDrumKit.html")) {
             if (sessionStorage.getItem("DrumKit") == null) {
-                response.innerHTML = "chose something";
+                antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
                 return;
             }
             window.open("auswahlRetroKit.html", "_self");
         }
         if (window.location.href.includes("auswahlRetroKit.html")) {
             if (sessionStorage.getItem("RetroKit") == null) {
-                response.innerHTML = "chose something";
+                antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
                 return;
             }
             window.open("auswahlLoopKit.html", "_self");
         }
         if (window.location.href.includes("auswahlLoopKit.html")) {
-            if (sessionStorage.GetItem("LoopKit") == null) {
-                response.innerHTML = "chose something";
+            if (sessionStorage.getItem("LoopKit") == null) {
+                antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
                 return;
             }
-            window.open("completeBundle.html", "_self");
+            window.open("completeKit.html", "_self");
         }
     }
     function speichern(_link, _typ) {
         sessionStorage.setItem(_typ, _link);
     }
-    function currentKit() {
+    function derzeitigKit() {
         if (path == "auswahlDrumKit.html") {
-            currentPick.innerHTML = "";
-            let imgDrumKit = document.createElement("img");
-            imgDrumKit.setAttribute("src", sessionStorage.etItem("DrumKit"));
-            currentPick.appendChild(imgDrumKit);
-        }
-        else if (path == "auswahlDrumKit.html") {
-            currentPick.innerHTML = "";
+            derzeitigAuswahl.innerHTML = "";
             let imgDrumKit = document.createElement("img");
             imgDrumKit.setAttribute("src", sessionStorage.getItem("DrumKit"));
-            currentPick.appendChild(imgDrumKit);
-            let imgRetroKit = document.createElement("img");
-            imgRetroKit.setAttribute("src", sessionStorage.getItem("Retrokit"));
-            currentPick.appendChild(imgRetroKit);
+            derzeitigAuswahl.appendChild(imgDrumKit);
         }
-        else if (path == "auswahlLoopKit.html") {
-            currentPick.innerHTML = "";
+        else if (path == "auswahlRetroKit.html") {
+            derzeitigAuswahl.innerHTML = "";
             let imgDrumKit = document.createElement("img");
             imgDrumKit.setAttribute("src", sessionStorage.getItem("DrumKit"));
-            currentPick.appendChild(imgDrumKit);
+            derzeitigAuswahl.appendChild(imgDrumKit);
             let imgRetroKit = document.createElement("img");
             imgRetroKit.setAttribute("src", sessionStorage.getItem("RetroKit"));
-            currentPick.appendChild(imgRetroKit);
+            derzeitigAuswahl.appendChild(imgRetroKit);
+        }
+        else if (path == "auswahlLoopKit.html") {
+            derzeitigAuswahl.innerHTML = "";
+            let imgDrumKit = document.createElement("img");
+            imgDrumKit.setAttribute("src", sessionStorage.getItem("DrumKit"));
+            derzeitigAuswahl.appendChild(imgDrumKit);
+            let imgRetroKit = document.createElement("img");
+            imgRetroKit.setAttribute("src", sessionStorage.getItem("RetroKit"));
+            derzeitigAuswahl.appendChild(imgRetroKit);
             let imgLoopKit = document.createElement("img");
             imgLoopKit.setAttribute("src", sessionStorage.getItem("LoopKit"));
-            currentPick.appendChild(imgLoopKit);
+            derzeitigAuswahl.appendChild(imgLoopKit);
         }
     }
 })(Aufgabe_2_5 || (Aufgabe_2_5 = {}));

@@ -1,30 +1,30 @@
 "use strict";
 var Aufgabe_2_5;
 (function (Aufgabe_2_5) {
-    let completeBundle = document.getElementById("completeBundle");
+    let completeKit = document.getElementById("completeKit");
     let buttonsDiv = document.getElementById("buttons");
     function speicherAnzeigen() {
         let imgDrumKit = document.createElement("img");
         imgDrumKit.setAttribute("src", sessionStorage.getItem("DrumKit"));
-        completeBundle.appendChild(imgDrumKit);
+        completeKit.appendChild(imgDrumKit);
         let imgRetroKit = document.createElement("img");
         imgRetroKit.setAttribute("src", sessionStorage.getItem("RetroKit"));
-        completeBundle.appendChild(imgRetroKit);
+        completeKit.appendChild(imgRetroKit);
         let imgLoopKit = document.createElement("img");
         imgLoopKit.setAttribute("src", sessionStorage.getItem("LoopKit"));
-        completeBundle.appendChild(imgLoopKit);
+        completeKit.appendChild(imgLoopKit);
     }
     speicherAnzeigen();
     let startseite = document.createElement("button");
-    startseite.id = "cancel";
-    startseite.innerHTML = "Create New ";
+    startseite.id = "abbrechen";
+    startseite.innerHTML = "Create a new Bundle!";
     startseite.addEventListener("click", neuBeginnen);
     buttonsDiv.appendChild(startseite);
     function neuBeginnen() {
-        window.open("index.html", "_self");
-        console.log("canceled");
+        window.open("auswahlDrumKit.html", "_self");
+        console.log("Abgebrochen");
     }
-    if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "completeBundle.html") {
+    if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "completeKit.html") {
         servercheck();
     }
     async function servercheck() {
@@ -32,18 +32,18 @@ var Aufgabe_2_5;
         let query = new URLSearchParams(sessionStorage);
         let url = "https://gis-communication.herokuapp.com";
         url = url + "?" + query.toString();
-        let serverresponse = await fetch(url);
-        let response = await serverresponse.json();
-        if (response.error != undefined) {
-            console.log(response.error);
+        let serverantwort = await fetch(url);
+        let rückmeldung = await serverantwort.json();
+        if (rückmeldung.error != undefined) {
+            console.log(rückmeldung.error);
             let messagediv = document.getElementById("error");
-            messagediv.appendChild(document.createTextNode("" + response.error));
+            messagediv.appendChild(document.createTextNode("" + rückmeldung.error));
         }
-        else if (response.message != undefined) {
-            console.log(response.message);
+        else if (rückmeldung.message != undefined) {
+            console.log(rückmeldung.message);
             let messagediv = document.getElementById("message");
-            messagediv.appendChild(document.createTextNode("" + response.message));
+            messagediv.appendChild(document.createTextNode("" + rückmeldung.message));
         }
     }
 })(Aufgabe_2_5 || (Aufgabe_2_5 = {}));
-//# sourceMappingURL=completeBundle.js.map
+//# sourceMappingURL=completeKit.js.map

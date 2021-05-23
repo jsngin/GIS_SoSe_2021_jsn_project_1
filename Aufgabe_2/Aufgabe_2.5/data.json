@@ -1,0 +1,23 @@
+    {
+        "DrumKit":  [
+           {"link": "assets/DrumKit/DrumKit_1.PNG", "name": "DrumKit1", "typ": "DrumKit"}, 
+           {"link": "assets/DrumKit/DrumKit_2.PNG", "name": "DrumKit2", "typ": "DrumKit"},      
+           {"link": "assets/DrumKit/DrumKit_3.PNG", "name": "DrumKit3", "typ": "DrumKit"},
+           {"link": "assets/DrumKit/DrumKit_4.PNG", "name": "DrumKit4", "typ": "DrumKit"}
+        ],
+
+       "RetroKit":  [
+            {"link": "assets/RetroKit/RetroKit_1.PNG", "name": "RetroKit1", "typ": "RetroKit"}, 
+            {"link": "assets/RetroKit/RetroKit_2.PNG", "name": "RetroKit2", "typ": "RetroKit"},      
+            {"link": "assets/RetroKit/RetroKit_3.PNG", "name": "RetroKit3", "typ": "RetroKit"},
+            {"link": "assets/RetroKit/RetroKit_4.PNG", "name": "RetroKit4", "typ": "RetroKit"}
+        ],
+
+       "LoopKit":  [
+            {"link": "assets/LoopKit/LoopKit_1.PNG", "name": "LoopKit1", "typ": "LoopKit"}, 
+            {"link": "assets/LoopKit/LoopKit_2.PNG", "name": "LoopKit2", "typ": "LoopKit"},      
+            {"link": "assets/LoopKit/LoopKit_3.PNG", "name": "LoopKit3", "typ": "LoopKit"},
+            {"link": "assets/LoopKit/LoopKit_4.PNG", "name": "LoopKit4", "typ": "LoopKit"}
+        ]        
+    }
+   

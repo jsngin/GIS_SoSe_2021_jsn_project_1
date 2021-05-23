@@ -12,7 +12,7 @@ var Aufgabe_2_5;
     bildDiv.appendChild(drumKitButton);
     drumKitButton.addEventListener("click", openDrumKit);
     function openDrumKit() {
-        window.open("auswahlDrumKit.html");
+        window.open("auswahlDrumKit.html", "_self");
         console.log("auswahlDrumKit");
     }
 })(Aufgabe_2_5 || (Aufgabe_2_5 = {}));
