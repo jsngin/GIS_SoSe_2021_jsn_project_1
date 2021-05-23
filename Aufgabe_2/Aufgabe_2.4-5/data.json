@@ -1,7 +1,4 @@
-namespace Aufgabe_2_4 {
 
-    export let kitJSON: string = 
-    `
     {
         "DrumKit":  [
            {"link": "assets/DrumKit/DrumKit_1.PNG", "name": "Kit1", "typ": 0}, 
@@ -24,7 +21,4 @@ namespace Aufgabe_2_4 {
             {"link": "assets/LoopKit/LoopKit_4.PNG", "name": "Kit3", "typ": 2}
         ]        
     }
-    `
-    ;
-    export let _kit: Kit = JSON.parse(kitJSON);
-}
+ 
