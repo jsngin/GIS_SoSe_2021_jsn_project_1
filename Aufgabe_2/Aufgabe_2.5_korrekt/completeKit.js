@@ -17,7 +17,7 @@ var Aufgabe_2_5;
     speicherAnzeigen();
     let startseite = document.createElement("button");
     startseite.id = "abbrechen";
-    startseite.innerHTML = "Gefällt mir doch nicht, ich möchte von vorne beginnen";
+    startseite.innerHTML = "Nah! Create a new Bundle!";
     startseite.addEventListener("click", neuBeginnen);
     buttonsDiv.appendChild(startseite);
     function neuBeginnen() {

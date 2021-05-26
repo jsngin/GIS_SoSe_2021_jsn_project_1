@@ -27,7 +27,7 @@ namespace Aufgabe_2_5 {
 
     let startseite: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
     startseite.id = "abbrechen";
-    startseite.innerHTML = "Gefällt mir doch nicht, ich möchte von vorne beginnen";
+    startseite.innerHTML = "Nah! Create a new Bundle!";
     startseite.addEventListener("click", neuBeginnen);
     buttonsDiv.appendChild(startseite);
 

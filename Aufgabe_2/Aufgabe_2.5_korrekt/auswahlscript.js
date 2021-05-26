@@ -72,21 +72,21 @@ var Aufgabe_2_5;
     function nächsteAuswahl() {
         if (window.location.href.includes("auswahlDrumKit.html")) {
             if (sessionStorage.getItem("drumkit") == null) {
-                antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
+                antwort.innerHTML = "Chose something";
                 return;
             }
             window.open("auswahlRetroKit.html", "_self");
         }
         if (window.location.href.includes("auswahlRetroKit.html")) {
             if (sessionStorage.getItem("retrokit") == null) {
-                antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
+                antwort.innerHTML = "Chose something";
                 return;
             }
             window.open("auswahlLoopKit.html", "_self");
         }
         if (window.location.href.includes("auswahlLoopKit.html")) {
             if (sessionStorage.getItem("loopkit") == null) {
-                antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
+                antwort.innerHTML = "Chose something";
                 return;
             }
             window.open("completeKit.html", "_self");
