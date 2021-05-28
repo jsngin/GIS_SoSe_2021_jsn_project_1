@@ -1,0 +1,22 @@
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#button {
+    border-radius: 1px solid rosybrown;
+    background-color: red;
+    margin-top: 20px;
+    border-color: red;
+}
+
+#button:hover {
+    color: grey;
+}
+
+h1 {
+    color:black;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
