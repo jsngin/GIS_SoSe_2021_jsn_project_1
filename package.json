@@ -1,0 +1,21 @@
+{
+  "name": "jsnserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node Aufgabe_3/Aufgabe_3.1/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsngin/GIS_SoSe_2021_jsn_project_1.git"
+  },
+  "author": "Jasenko Dzin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsngin/GIS_SoSe_2021_jsn_project_1/issues"
+  },
+  "homepage": "https://github.com/jsngin/GIS_SoSe_2021_jsn_project_1#readme"
+}
