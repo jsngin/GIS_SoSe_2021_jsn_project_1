@@ -1,0 +1,32 @@
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#buttonJSON{
+    border-radius: 1px solid grey;
+    background-color:grey;
+    margin-top: 20px;
+    border-color:grey;
+    color: white;
+    text-align: center;
+}
+
+#buttonHTML {
+    border-radius: 1px solid grey;
+    background-color:grey;
+    margin-top: 20px;
+    border-color:grey;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: grey;
+    text-align: center;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
