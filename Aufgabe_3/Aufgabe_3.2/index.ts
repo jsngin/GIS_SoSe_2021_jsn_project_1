@@ -27,8 +27,8 @@ namespace Aufgabe3_2 {
         let responseText: string = await response.text();
         console.log(responseText);
 
-        //interface IResponse {
-            //[key: string]: string;
+        interface IResponse {
+            [key: string]: string;
         }
     }
-//}
+}
